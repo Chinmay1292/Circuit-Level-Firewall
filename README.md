@@ -22,5 +22,5 @@ For checking the hosts path click below as per prefered OS:
 ##### Commands
 Make sure you are in root environment for Kali Linux or running as an administrator in Windows OS.
 1. **sudo su** (For enabling root)
-2. **cd <Your Circuit Level Firewall file location>** (To change the directory)
+2. **cd {Your Circuit Level Firewall file location}** (To change the directory)
 3. **python3 circuit-level-firewall.py**
