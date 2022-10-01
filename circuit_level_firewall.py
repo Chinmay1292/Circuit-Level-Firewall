@@ -48,7 +48,7 @@ def block_websites():
             for site in  sites_to_block:
                 if site not in hosts_content:
                    hostfile.write(redirect + ' ' + site + '\n')
-        print('Site(s) Blocked!')
+         print('Site(s) Blocked!')
     
     else:
         #Removing the blocked list
