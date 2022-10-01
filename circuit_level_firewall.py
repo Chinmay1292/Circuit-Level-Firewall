@@ -60,3 +60,7 @@ def block_websites():
                     hostfile.write(line)
             hostfile.truncate() # This removes all the rest remaining portion
             print('Site(s) Unblocked')
+
+# sudo python main.py
+if __name__ == '__main__':
+    block_websites()
