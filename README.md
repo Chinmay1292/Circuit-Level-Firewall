@@ -1,4 +1,4 @@
-#CIRCUIT-LEVEL FIREWALL
+# CIRCUIT-LEVEL FIREWALL
 ### Introduction
 Circuit-level firewalls function similarly to application gateways in that they too use a proxy to secure the network. When the circuit gateway scans a packet, however, it often only checks that the connection is legitimate, ensuring that the incoming packets are coming from the same source that the request was sent to and that the user has sufficient privileges for whatever service is needed.
 Circuit-level gateways offer a wider variety of possible rules than other firewalls along with its proxy service, so it is more versatile in this regard. For example, it can block specific URLs from being accessed, whereas a packet filter would need the IP address of the website, which may not be unique since many large companies such as Google use multiple servers.
