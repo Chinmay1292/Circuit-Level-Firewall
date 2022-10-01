@@ -39,3 +39,24 @@ for i in tqdm (range (100),
 hosts_path = '/etc/hosts'
 
 redirect = "127.0.0.1"
+
+#Block sites till the end time
+def block_websites():
+    if datetime.now() < end_time: 
+       	with open(hosts_path, 'r+') as hostfile:
+            hosts_content = hostfile.read()
+            for site in  sites_to_block:
+                if site not in hosts_content:
+                   hostfile.write(redirect + ' ' + site + '\n')
+        print('Site(s) Blocked!')
+    
+    else:
+        #Removing the blocked list
+        with open(hosts_path, 'r+') as hostfile:
+            lines = hostfile.readlines()
+            hostfile.seek(0)
+            for line in lines:
+                if not any(site in line for site in sites_to_block):
+                    hostfile.write(line)
+            hostfile.truncate() # This removes all the rest remaining portion
+            print('Site(s) Unblocked')
