@@ -35,3 +35,7 @@ print("Almost here!")
 for i in tqdm (range (100),
                ascii=False, ncols=75):
     time.sleep(0.03)
+
+hosts_path = '/etc/hosts'
+
+redirect = "127.0.0.1"
