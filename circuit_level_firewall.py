@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 import time
 import logo
+from tqdm import tqdm
 
 print('Choose 1 for Blocking sites and 2 for Unblocking: \n')
 
@@ -22,3 +23,15 @@ elif choice == 2:
 	ini_time_for_now = datetime.now()
 	end_time = ini_time_for_now - timedelta(days = 1) # y, m, d, h, min
 	sites_to_block = list(map(str,input("Enter sites to unblocked using spaces: ").split()))
+
+else:
+	print("Invalid input")
+	
+print("Initiating...")
+for i in tqdm (range (100),
+               ascii=False, ncols=75):
+    time.sleep(0.03)
+print("Almost here!")
+for i in tqdm (range (100),
+               ascii=False, ncols=75):
+    time.sleep(0.03)
